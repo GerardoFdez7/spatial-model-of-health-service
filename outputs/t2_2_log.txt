@@ -1,0 +1,29 @@
+== 2.2 Estadísticas de los componentes ==
+       dist_media_km  dens_sin_cob  inst_10k       C1       C2       C3      IVE
+count        352.000       352.000   352.000  352.000  352.000  352.000  352.000
+mean           7.763        62.906     0.967    0.213    0.101    0.943    0.440
+std            6.557        99.630     2.213    0.183    0.160    0.132    0.127
+min            0.138         0.000     0.000    0.000    0.000    0.000    0.000
+25%            2.888         0.000     0.000    0.077    0.000    0.955    0.366
+50%            5.825        17.429     0.000    0.159    0.028    1.000    0.412
+75%           11.539        92.520     0.760    0.318    0.148    1.000    0.524
+max           35.998       624.488    16.818    1.000    1.000    1.000    0.842
+
+Pesos: {'dist': 0.4, 'unc_density': 0.25, 'capacity': 0.35}
+Robustez (correlación de Spearman con el IVE base): pesos iguales = 0.999; winsorizado p95 = 0.994
+Coincidencia del top-10: pesos iguales 8/10; winsorizado 5/10
+Municipios con 0 instalaciones: 178 de 352
+
+== 2.2c Diez municipios con mayor IVE ==
+                                              label   poblacion  dist_media_km  dens_sin_cob  n_inst  inst_10k     C1     C2   C3    IVE
+GID_2                                                                                                                                   
+GTM.8.13_1          SanGasparIxchil (Huehuetenango)   23310.488         21.890       623.362     0.0       0.0  0.607  0.998  1.0  0.842
+GTM.1.1_1                      Chahal (AltaVerapaz)   26512.706         35.998        92.147     0.0       0.0  1.000  0.148  1.0  0.787
+GTM.8.3_1               Colotenango (Huehuetenango)   30772.963         20.325       527.928     0.0       0.0  0.563  0.845  1.0  0.787
+GTM.8.14_1   SanIldefonsoIxtahuacán (Huehuetenango)  117720.203         22.607       454.095     0.0       0.0  0.627  0.727  1.0  0.782
+GTM.8.21_1          SanRafaelPetzal (Huehuetenango)   23087.730         15.991       624.488     0.0       0.0  0.442  1.000  1.0  0.777
+GTM.1.4_1     FrayBartolomédelasCasas (AltaVerapaz)   76916.368         35.404        74.059     0.0       0.0  0.983  0.119  1.0  0.773
+GTM.17.11_1                   Malacatán (SanMarcos)  120389.185         18.656       523.873     0.0       0.0  0.516  0.839  1.0  0.766
+GTM.12.10_1                         SanLuis (Petén)   95865.862         32.436        33.915     0.0       0.0  0.901  0.054  1.0  0.724
+GTM.17.27_1                      Tacaná (SanMarcos)   86927.375         24.531       235.832     0.0       0.0  0.680  0.378  1.0  0.717
+GTM.12.6_1                        SanAndrés (Petén)   30053.039         32.243         3.312     0.0       0.0  0.895  0.005  1.0  0.709
