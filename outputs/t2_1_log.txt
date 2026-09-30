@@ -1,0 +1,12 @@
+== 2.1a Top 5 municipios por población sin cobertura a 10 km ==
+                                    label  poblacion  pob_sin_cobertura  dist_centroide_km  dist_media_pond_km tipo_mas_cercana  dist_hosp_clinica_km tipo_hosp_clinica  radio_min_pob_km  radio_min_geom_km  tiempo_pob_min  tiempo_geom_min
+GID_2                                                                                                                                                                                                                                        
+GTM.1.9_1    SanPedroCarchá (AltaVerapaz)   280700.0           153809.0               15.6                10.9         pharmacy                  16.2            clinic              28.2               28.2            42.3             42.3
+GTM.1.2_1            Chisec (AltaVerapaz)   169688.7           153585.7               22.3                24.3         pharmacy                  45.9          hospital              47.5               48.3            71.3             72.5
+GTM.14.9_1               Joyabaj (Quiché)   135242.0           130106.9               19.6                16.4         pharmacy                  21.6          hospital              20.9               21.2            31.4             31.8
+GTM.12.3_1             LaLibertad (Petén)   135819.8           122626.9               24.2                22.6         pharmacy                  50.3          hospital              52.6               64.4            78.9             96.6
+GTM.17.11_1         Malacatán (SanMarcos)   120389.2           120389.2               19.6                18.7         pharmacy                  26.3          hospital              25.7               26.2            38.5             39.3
+
+== 2.1b Tiempo aproximado = radio / 40 km/h (distancia recta; en carretera real x1.3 aprox.) ==
+== 2.1c Curva: rodilla (Kneedle) r=17 km (88.5 %); ganancia <1 pp/km desde r=21 km (93.3 %)
+   Cobertura a 5/10/20/30/50 km: 5km=52.0%, 10km=72.1%, 20km=92.4%, 30km=98.0%, 50km=99.9%
