@@ -1,0 +1,39 @@
+== 1.2a CRS de trabajo ==
+  nivel1: EPSG:32615  (unidad: metre)
+  nivel2: EPSG:32615  (unidad: metre)
+  instalaciones: EPSG:32615  (unidad: metre)
+  población: EPSG:32615  (unidad: metre)
+  Factor de escala UTM 15N en centro del país: k = 1.00048  (error lineal 0.05 %)
+  Factor de escala UTM 15N en extremo este (Izabal): k = 1.00285  (error lineal 0.29 %)
+== 1.2c Estadísticas por departamento (ordenadas por densidad ascendente) ==
+       NAME_1  area_km2  n_instalaciones  poblacion  inst_por_100k_hab  dist_media_vecino_km
+  Totonicapán   1077.25                8  500410.36               1.60                  3.65
+    SanMarcos   3541.66               29 1267471.17               2.29                  1.21
+   ElProgreso   1687.94                5  207576.94               2.41                  3.01
+      Jutiapa   3351.32               16  605037.03               2.64                  2.99
+    SantaRosa   3023.90               15  480645.38               3.12                  3.53
+  BajaVerapaz   2821.31               11  337661.24               3.26                  7.16
+       Zacapa   2727.04               10  295284.79               3.39                  1.01
+       Jalapa   1972.96               15  431158.16               3.48                  2.01
+       Quiché   7231.63               42 1186660.45               3.54                  1.48
+  AltaVerapaz  10061.75               56 1437768.43               3.89                  2.42
+Huehuetenango   7649.05               63 1545825.90               4.08                  1.18
+       Izabal   8806.39               23  520862.73               4.42                  4.89
+        Petén  36221.64               57  685989.04               8.31                  2.82
+   Chiquimula   2390.25               40  480265.28               8.33                  0.85
+Chimaltenango   1884.38               76  813964.29               9.34                  0.63
+    Escuintla   4776.90               90  901922.13               9.98                  0.77
+Suchitepéquez   2080.01               70  661128.38              10.59                  0.67
+Quezaltenango   2130.10              158  995729.97              15.87                  0.19
+       Sololá   1179.24              111  524132.35              21.18                  0.25
+   Retalhuleu   1920.88               92  417038.77              22.06                  0.88
+    Guatemala   2214.57              958 3807436.77              25.16                  0.17
+ Sacatepéquez    556.96              113  443556.46              25.48                  0.21
+
+Tres departamentos con menor densidad de cobertura:
+     NAME_1  inst_por_100k_hab
+Totonicapán               1.60
+  SanMarcos               2.29
+ ElProgreso               2.41
+
+Población total asignada: 18,547,526; área total: 109,307 km²
