@@ -1,0 +1,33 @@
+3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]
+== 1.1a Versiones ==
+  geopandas.__version__ = 1.2.0
+  shapely.__version__ = 2.1.2
+  pandas.__version__ = 3.0.6
+  numpy.__version__ = 2.5.3
+  matplotlib.__version__ = 3.11.2
+  requests.__version__ = 2.34.2
+  rasterio.__version__ = 1.5.1
+== 1.1b GADM ==
+  GET https://geodata.ucdavis.edu/gadm/gadm4.1/json/gadm41_GTM_1.json
+  Nivel 1: 22 polígonos, CRS=EPSG:4326
+  GET https://geodata.ucdavis.edu/gadm/gadm4.1/json/gadm41_GTM_2.json
+  Nivel 2: 354 polígonos, CRS=EPSG:4326
+== 1.1c Instalaciones de salud ==
+  !! HEALTHSITES_API_KEY no definida -> usando respaldo OSM/Overpass
+  Fuente: OpenStreetMap (Overpass) - respaldo
+  Registros descargados: 2058; dentro de Guatemala: 2058
+  Tipos presentes:
+type
+pharmacy    1048
+clinic       352
+hospital     298
+dentist      184
+doctors      110
+other         66
+== 1.1d WorldPop ==
+  GET https://data.worldpop.org/GIS/Population/Global_2015_2030/R2025A/2025/GTM/v1/1km_ua/constrained/gtm_pop_2025_CN_1km_R2025A_UA_v1.tif
+  Resolución: 0.008333° x 0.008333°  ~ 893 m x 928 m (a lat 15.8°)
+  CRS: EPSG:4326
+  Filas x columnas: 489 x 480
+  Valor máximo por píxel: 14450.8 hab/píxel(1 km²)
+  Población total del ráster: 18,547,526
