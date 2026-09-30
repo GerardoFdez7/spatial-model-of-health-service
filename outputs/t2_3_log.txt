@@ -1,0 +1,16 @@
+== 2.3a Grilla de 20 km: 552 puntos -> 273 dentro del territorio y fuera de agua
+   Cobertura actual a 10 km: 72.14 %  (sin cobertura: 5,167,543 hab en 54626 celdas)
+   Población adicional por candidato: máx 139,703; mediana 7,609; candidatos con ganancia 0: 17
+
+== 2.3c Selección voraz de 5 puntos ==
+ iter  x_utm   y_utm  pob_adicional  pob_adicional_acum  cobertura_total_pct  departamento              municipio
+    1 603780 1640660         139703              139703                72.89     SanMarcos               Catarina
+    2 643780 1700660         135794              275497                73.62 Huehuetenango        SanRafaelPetzal
+    3 623780 1700660         106274              381771                74.20 Huehuetenango SanIldefonsoIxtahuacán
+    4 603780 1680660          89968              471739                74.68     SanMarcos                 Tacaná
+    5 723780 1660660          85539              557278                75.14        Quiché                Joyabaj
+
+Cobertura: 72.14 % -> 75.14 % (+557,278 hab)
+
+Verificación MILP (HiGHS): 'Optimization terminated successfully. (HiGHS Status 7: Optimal)'  óptimo = 557,278 hab adicionales; voraz = 557,278 (100.0 % del óptimo; garantía teórica >= 63.2 % = 1-1/e)
+   Cobertura total óptima: 75.14 %
