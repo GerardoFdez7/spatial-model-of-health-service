@@ -1,0 +1,15 @@
+== 1.3a Buffers: instalaciones en CRS EPSG:32615
+
+== 1.3b Cobertura (todas las instalaciones, n=2058) ==
+ radio_km  poblacion_cubierta  poblacion_total  porcentaje_cobertura  chequeo_por_distancia  area_cobertura_km2
+        5             9647909         18547526                 52.02                9648204               15513
+       10            13379407         18547526                 72.14               13379983               39658
+       20            17141588         18547526                 92.42               17141948               78973
+
+== 1.3b Cobertura (sin farmacias, n=1010) ==
+ radio_km  poblacion_cubierta  poblacion_total  porcentaje_cobertura  chequeo_por_distancia  area_cobertura_km2
+        5             8929236         18547526                 48.14                8929288               12536
+       10            12535118         18547526                 67.58               12536928               33739
+       20            16472395         18547526                 88.81               16472691               71505
+
+== 1.3c Municipios a 10 km: sin cobertura=29, parcial=216, completa=107
