@@ -1,0 +1,22 @@
+- 2.3a Grilla de 50 km: 160 puntos en el rectángulo; 87 dentro del estado
+
+- 2.3b Cobertura actual a 25 km: 1,007,714 hab (56.39 %); sin cobertura: 779,351 hab
+count        87.0
+mean       6592.0
+std       14114.0
+min         136.0
+25%        1154.0
+50%        2562.0
+75%        6032.0
+max      119504.0
+
+- 2.3c Selección voraz
+ iteracion    condado       lon     lat  pob_adicional  pob_cubierta_total  pct_cobertura
+         1     Elmore -116.2253 43.1042         119504             1127218          63.08
+         2 Bonneville -111.3100 43.0942          32613             1159831          64.90
+         3 Bonneville -111.2901 43.5439          29215             1189046          66.54
+- 2.3c Cobertura: 56.39 % -> 66.54 % (+181,332 hab)
+- 2.3c Punto 1: Ada 118,120, Elmore 828, Owyhee 555
+- 2.3c Punto 2: Bonneville 31,470, Caribou 879, Bingham 265
+- 2.3c Punto 3: Bonneville 25,109, Madison 4,080
+- 2.3c Traslape máximo entre candidatos: 0.000 m²; óptimo = 181,332 hab; voraz = 181,332 hab
