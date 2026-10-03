@@ -1,0 +1,41 @@
+- 3.1a Hospitales seleccionados
+condado  rank_IVA                        hospital        ciudad               tipo  camas      lat        lon
+  Latah         9          GRITMAN MEDICAL CENTER        MOSCOW GENERAL ACUTE CARE     25 46.72823 -117.00055
+  Idaho        11 ST. MARY'S HOSPITAL AND CLINICS    COTTONWOOD    CRITICAL ACCESS     25 46.05038 -116.35330
+ Elmore        13               ST. LUKE'S ELMORE MOUNTAIN HOME    CRITICAL ACCESS     21 43.13889 -115.69360
+
+- 3.1a Buffer 25 km vs isocrona 30 min
+                                                        0                                1                  2
+condado                                             Latah                            Idaho             Elmore
+hospital                           GRITMAN MEDICAL CENTER  ST. MARY'S HOSPITAL AND CLINICS  ST. LUKE'S ELMORE
+area_buffer_km2                                      1134                             1963               1963
+area_isocrona_km2                                    1077                             1553               1812
+pct_buffer_alcanzable_30min                          81.3                             64.1               71.4
+buffer_no_alcanzable_km2                              212                              705                561
+isocrona_fuera_buffer_km2                             155                              295                409
+pob_buffer25                                        16620                             2697               9452
+pob_isocrona30                                      15781                             2610              14224
+dif_pob                                              -839                              -87               4773
+dif_pct                                              -5.0                             -3.2               50.5
+alcance_max_euclid_km                                39.5                             40.8               58.5
+rodeo_mediano_5_25km                                  1.2                             1.21               1.19
+sectores_10grados_con_red_22_25km                   100.0                             69.0               47.0
+km_vias_buffer                                       2288                             1657               1019
+
+- 3.1a Totales (unión de los 3 hospitales)
+                  metrica  area_km2  poblacion
+             Buffer 25 km      5061      28769
+          Isocrona 30 min      4442      32616
+Diferencia (iso - buffer)      -619       3847
+
+- 3.1a Desglose por condado
+                       hospital   condado  km2_buffer  km2_isocrona  pob_buffer  pob_isocrona
+         GRITMAN MEDICAL CENTER     Latah        1077          1005       15623         14582
+         GRITMAN MEDICAL CENTER   Benewah           0             4           0            18
+         GRITMAN MEDICAL CENTER Nez Perce          54            64         997          1181
+ST. MARY'S HOSPITAL AND CLINICS     Lewis         501           524        1589          1660
+ST. MARY'S HOSPITAL AND CLINICS Nez Perce           0            10           0           177
+ST. MARY'S HOSPITAL AND CLINICS     Idaho        1462          1020        1109           774
+              ST. LUKE'S ELMORE       Ada          17            48        3001          8460
+              ST. LUKE'S ELMORE    Elmore        1867          1663        6403          5704
+              ST. LUKE'S ELMORE    Owyhee          80           101          47            60

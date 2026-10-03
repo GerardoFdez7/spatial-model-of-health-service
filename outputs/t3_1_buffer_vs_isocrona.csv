@@ -1,0 +1,4 @@
+condado,hospital,area_buffer_km2,area_isocrona_km2,pct_buffer_alcanzable_30min,buffer_no_alcanzable_km2,isocrona_fuera_buffer_km2,pob_buffer25,pob_isocrona30,dif_pob,dif_pct,alcance_max_euclid_km,rodeo_mediano_5_25km,sectores_10grados_con_red_22_25km,km_vias_buffer
+Latah,GRITMAN MEDICAL CENTER,1134,1077,81.3,212,155,16620,15781,-839,-5.0,39.5,1.2,100.0,2288
+Idaho,ST. MARY'S HOSPITAL AND CLINICS,1963,1553,64.1,705,295,2697,2610,-87,-3.2,40.8,1.21,69.0,1657
+Elmore,ST. LUKE'S ELMORE,1963,1812,71.4,561,409,9452,14224,4773,50.5,58.5,1.19,47.0,1019
