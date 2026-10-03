@@ -1,0 +1,14 @@
+nombre,Base (0.45/0.35/0.20),Iguales (1/3 c/u),Distancia (0.70/0.15/0.15),Camas (0.20/0.60/0.20),Ocupación (0.20/0.20/0.60)
+Owyhee,1,1,1,1,1
+Clark,2,2,2,2,2
+Custer,3,3,3,3,3
+Boise,4,4,4,4,4
+Fremont,5,5,5,5,5
+Jefferson,6,6,7,6,8
+Lincoln,7,7,8,7,15
+Camas,8,8,10,8,13
+Latah,9,9,14,9,7
+Adams,10,12,15,10,20
+Idaho,11,10,6,20,6
+Clearwater,16,13,9,27,9
+Bannock,19,16,17,21,10
