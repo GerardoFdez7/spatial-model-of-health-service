@@ -1,0 +1,73 @@
+geopandas 1.2.0 | shapely 2.1.2 | pyproj 3.8.0 | pandas 3.0.5
+
+- hospitales_eeuu.geojson: 7,154 registros | CRS = EPSG:4326
+nombre                    str
+tipo                      str
+ciudad                    str
+estado                    str
+condado                   str
+fips_condado              str
+camas_total           float64
+camas_icu             float64
+camas_licenciadas     float64
+ocupacion_total       float64
+ocupacion_icu         float64
+geometry             geometry
+
+- condados_eeuu.geojson: 3,221 registros | CRS = EPSG:4326
+fips               str
+nombre             str
+cod_estado         str
+geometry      geometry
+
+- estados_eeuu.geojson: 51 registros | CRS = EPSG:4326
+nombre           str
+codigo           str
+pais             str
+geometry    geometry
+
+- poblacion_condados.csv: 3,246 registros | CRS = no aplica (tabla sin geometría)
+fips           int64
+condado          str
+estado           str
+lat          float64
+lon          float64
+poblacion    float64
+
+Estados alrededor de 50 hospitales:
+        hospitales  con_camas
+estado                       
+CT              41         36
+ME              42         38
+ID              55         48
+ND              56         49
+NM              63         53
+UT              67         54
+MT              68         60
+MD              69         63
+OR              70         65
+WV              70         64
+NV              71         61
+SD              71         61
+PR              73         56
+
+- 1.1b Población: 3246 registros -> eliminados 102 con FIPS >= 80000 -> 3144
+- 1.1b Población nula tras la limpieza: 0 registros
+- 1.1b Hospitales con camas_total nulo: 1,090 de 7,154 (15.24 %)
+
+- 1.1c Idaho: 55 hospitales; 7 sin camas_total; quedan 48 para el análisis
+                             nombre               tipo     ciudad    condado
+SAINT ALPHONSUS EAGLE HEALTH PLZ-ER GENERAL ACUTE CARE      EAGLE        ADA
+ ST. LUKE'S MERIDIAN MEDICAL CENTER            SPECIAL   MERIDIAN        ADA
+          ST. LUKE'S REHABILITATION     REHABILITATION      BOISE        ADA
+            BOISE VA MEDICAL CENTER           MILITARY      BOISE        ADA
+             IDAHO DOCTORS HOSPITAL GENERAL ACUTE CARE  BLACKFOOT    BINGHAM
+   SAFE HAVEN HOSPITAL OF POCATELLO        PSYCHIATRIC  POCATELLO    BANNOCK
+         SAWTOOTH BEHAVIORAL HEALTH        PSYCHIATRIC TWIN FALLS TWIN FALLS
+- 1.1c Condados con geometría: 44 | registros de población: 44 | condados con población tras la unión: 44
+- 1.1c Población total del estado: 1,787,065
+
+- 1.1d CRS proyectado: EPSG:8826 = NAD83 / Idaho Transverse Mercator
+- 1.1d EPSG:8826 (NAD83 / Idaho Transverse Mercator): k en [0.99960, 1.00039] -> error máximo 0.040 %
+- 1.1d EPSG:26911 (NAD83 / UTM zone 11N): k en [0.99960, 1.00257] -> error máximo 0.257 %
+- 1.1d Área del estado: 216,188 km² (oficial: 216,443 km², diferencia -0.12 %)

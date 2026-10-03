@@ -1,40 +1,33 @@
-"""Configuración central del laboratorio: territorio, rutas, CRS y parámetros del modelo."""
+# Configuración central del laboratorio: estado elegido, rutas, CRS y parámetros del modelo.
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RAW = ROOT / "data" / "raw"
-PROC = ROOT / "data" / "processed"
-OUT = ROOT / "outputs"
+RAW = ROOT / "data" / "raw"          # los 4 archivos de Canvas
+PROC = ROOT / "data" / "processed"   # capas intermedias
+OUT = ROOT / "outputs"               # tablas, mapas y logs del informe
 for _p in (RAW, PROC, OUT):
     _p.mkdir(parents=True, exist_ok=True)
 
-# --- Territorio: Guatemala -------------------------------------------------
-ISO3 = "GTM"
-COUNTRY = "Guatemala"
+F_ESTADOS = RAW / "estados_eeuu.geojson"
+F_HOSP = RAW / "hospitales_eeuu.geojson"
+F_CONDADOS = RAW / "condados_eeuu.geojson"
+F_POB = RAW / "poblacion_condados.csv"
 
-# --- Sistemas de coordenadas ----------------------------------------------
-CRS_GEO = "EPSG:4326"    # WGS84 (grados): formato nativo de GADM, healthsites y WorldPop
-CRS_PROJ = "EPSG:32615"  # WGS84 / UTM zona 15N (metros): ver justificación en RESPUESTAS.md
+# Estado elegido: el de 50 hospitales o el valor inmediato mayor (Idaho, 55)
+STATE_ABBR = "ID"
+STATE_FIPS = "16"
+STATE_NAME = "Idaho"
 
-# --- Fuentes ----------------------------------------------------------------
-GADM_URL = "https://geodata.ucdavis.edu/gadm/gadm4.1/json/gadm41_{iso}_{lvl}.json"
-# WorldPop Global2 R2025A: 2025 es el año más reciente ESTIMADO (2026-2030 son proyecciones).
-WORLDPOP_URL = ("https://data.worldpop.org/GIS/Population/Global_2015_2030/R2025A/2025/"
-                "{iso}/v1/1km_ua/constrained/{iso_l}_pop_2025_CN_1km_R2025A_UA_v1.tif")
-# Respaldo (serie histórica 2000-2020) por si R2025A no estuviera disponible.
-WORLDPOP_URL_FALLBACK = ("https://data.worldpop.org/GIS/Population/Global_2000_2020_1km/2020/"
-                         "{iso}/{iso_l}_ppp_2020_1km_Aggregated.tif")
-HEALTHSITES_URL = "https://healthsites.io/api/v2/facilities/"      # endpoint pedido en el enunciado
-HEALTHSITES_URL_V3 = "https://healthsites.io/api/v3/facilities/"   # solo si el servidor rechaza la v2 (deprecada)
-OVERPASS_URLS = ["https://overpass-api.de/api/interpreter",
-                 "https://overpass.kumi.systems/api/interpreter"]
+# CRS proyectado en metros: NAD83 / Idaho Transverse Mercator
+CRS_PROJ = "EPSG:8826"
 
-# --- Parámetros del modelo ---------------------------------------------------
-RADII_KM = [5, 10, 20]        # Task 1.3
-REF_RADIUS_KM = 10            # radio de referencia (Task 1.3c, 2.1, 2.2, 2.3)
-CURVE_RADII_KM = list(range(1, 51))   # Task 2.1c
-SPEED_KMH = 40                # Task 2.1b
-GRID_STEP_M = 20_000          # Task 2.3a
-N_NEW = 5                     # Task 2.3c
-# Pesos del índice de vulnerabilidad (Task 2.2b), suman 1
-WEIGHTS = {"dist": 0.40, "unc_density": 0.25, "capacity": 0.35}
+# Parámetros del modelo
+RADII_KM = [10, 25, 50]                    # Task 1.3a
+REF_RADIUS_KM = 25                         # Task 1.3c y 2.3
+CURVE_RADII_KM = list(range(5, 105, 5))    # Task 2.1b
+OCC_RADIUS_KM = 50                         # Task 2.2, componente 3
+GRID_STEP_M = 50_000                       # Task 2.3a
+N_NEW = 3                                  # Task 2.3c
+ISO_MIN = 30                               # Task 3.1
+WEIGHTS = {"C1_dist": 0.45, "C2_camas": 0.35, "C3_ocup": 0.20}   # Task 2.2b, suman 1
+FULL_TOL = 0.999                           # fracción de área para "completamente cubierto"

@@ -1,11 +1,13 @@
-adjustText==1.4.0
-geopandas==1.2.0
-matplotlib==3.11.2
-numpy==2.5.3
-pandas==3.0.6
-pyproj==3.8.0
-python-dotenv==1.2.3
-rasterio==1.5.1
-requests==2.34.2
-scipy==1.18.1
-shapely==2.1.2
+# Versiones con las que se generaron los resultados (Python 3.13); se aceptan versiones posteriores.
+geopandas>=1.0          # probado con 1.2.0
+shapely>=2.0            # 2.1.2
+pyproj>=3.6             # 3.8.0
+pyogrio>=0.7            # 0.13.0
+pandas>=2.2             # 3.0.5
+numpy>=1.26             # 2.5.3
+scipy>=1.11             # 1.18.1 (cKDTree, milp/HiGHS)
+matplotlib>=3.8         # 3.11.2
+adjustText>=1.0         # 1.4.0
+networkx>=3.2           # 3.6.1
+osmnx>=2.0              # 2.1.1 (Task 3.1)
+osmium>=4.0            # 4.x (opcional: solo si se usa el extracto .osm.pbf de Geofabrik en el Task 3.1)

@@ -1,0 +1,78 @@
+- 1.2 camas_icu nulo en 29 de 48 hospitales (se suman como 0)
+
+- 1.2 Tabla por condado (ordenada por camas/10k)
+ fips     nombre  poblacion  hospitales  camas_total  camas_uci  camas_10k  camas_uci_10k
+16035 Clearwater       8756           2           78          0      89.08           0.00
+16023      Butte       2597           1           14          0      53.91           0.00
+16029    Caribou       7155           1           25          0      34.94           0.00
+16007  Bear Lake       6125           1           21          0      34.29           0.00
+16011    Bingham      46811           2          131          5      27.98           1.07
+16069  Nez Perce      40408           1          110          9      27.22           2.23
+16001        Ada     481587           7         1195        105      24.81           2.18
+16071     Oneida       4531           1           11          0      24.28           0.00
+16055   Kootenai     165697           4          401         55      24.20           3.32
+16049      Idaho      16667           2           40          0      24.00           0.00
+16019 Bonneville     119062           2          267         35      22.43           2.94
+16059      Lemhi       8027           1           18          0      22.42           0.00
+16009    Benewah       9298           1           19          0      20.43           0.00
+16085     Valley      11392           2           23          0      20.19           0.00
+16083 Twin Falls      86878           1          172         30      19.80           3.45
+16087 Washington      10194           1           19          0      18.64           0.00
+16065    Madison      39907           1           67          4      16.79           1.00
+16021   Boundary      12245           1           20          0      16.33           0.00
+16079   Shoshone      12882           1           21          0      16.30           0.00
+16005    Bannock      87808           1          137         20      15.60           2.28
+16041   Franklin      13876           1           20          0      14.41           0.00
+16077      Power       7681           1           10          0      13.02           0.00
+16031     Cassia      24030           1           31          6      12.90           2.50
+16013     Blaine      23021           1           25          0      10.86           0.00
+16081      Teton      12142           1           13          0      10.71           0.00
+16047    Gooding      15179           1           16          0      10.54           0.00
+16053     Jerome      24412           1           25          0      10.24           0.00
+16027     Canyon     229849           2          208         31       9.05           1.35
+16039     Elmore      27511           1           21          0       7.63           0.00
+16067   Minidoka      21039           1           16          0       7.60           0.00
+16045        Gem      18112           1           13          0       7.18           0.00
+16057      Latah      40108           1           25          3       6.23           0.75
+16017     Bonner      45739           1           25          4       5.47           0.87
+16003      Adams       4294           0            0          0       0.00           0.00
+16015      Boise       7831           0            0          0       0.00           0.00
+16051  Jefferson      29871           0            0          0       0.00           0.00
+16061      Lewis       3838           0            0          0       0.00           0.00
+16043    Fremont      13099           0            0          0       0.00           0.00
+16025      Camas       1106           0            0          0       0.00           0.00
+16033      Clark        845           0            0          0       0.00           0.00
+16075    Payette      23951           0            0          0       0.00           0.00
+16073     Owyhee      11823           0            0          0       0.00           0.00
+16063    Lincoln       5366           0            0          0       0.00           0.00
+16037     Custer       4315           0            0          0       0.00           0.00
+
+- 1.2 Total estado: 48 hospitales, 3,237 camas, 307 UCI, 1,787,065 hab -> 18.11 camas/10k, 1.72 UCI/10k
+- 1.2 Condados sin hospital: 11 de 44
+
+- 1.2a Condados con > 10,000 hab: 29; con 0 camas: 4
+ fips    nombre  poblacion  hospitales  camas_total  camas_uci  camas_10k  camas_uci_10k
+16051 Jefferson      29871           0            0          0       0.00           0.00
+16075   Payette      23951           0            0          0       0.00           0.00
+16043   Fremont      13099           0            0          0       0.00           0.00
+16073    Owyhee      11823           0            0          0       0.00           0.00
+16017    Bonner      45739           1           25          4       5.47           0.87
+
+- 1.2b Mayor concentración de camas por habitante
+ fips     nombre  poblacion  hospitales  camas_total  camas_uci  camas_10k  camas_uci_10k
+16035 Clearwater       8756           2           78          0      89.08           0.00
+16023      Butte       2597           1           14          0      53.91           0.00
+16029    Caribou       7155           1           25          0      34.94           0.00
+16007  Bear Lake       6125           1           21          0      34.29           0.00
+16011    Bingham      46811           2          131          5      27.98           1.07
+ fips                                      nombre               tipo       ciudad  camas_total  camas_icu  ocupacion_total
+16007                 BEAR LAKE MEMORIAL HOSPITAL GENERAL ACUTE CARE   MONTPELIER         21.0        NaN         0.260000
+16011                   BINGHAM MEMORIAL HOSPITAL GENERAL ACUTE CARE    BLACKFOOT         25.0        5.0         0.720000
+16011                  IDAHO STATE HOSPITAL SOUTH        PSYCHIATRIC    BLACKFOOT        106.0        0.0         0.848023
+16023                  LOST RIVERS MEDICAL CENTER GENERAL ACUTE CARE         ARCO         14.0        NaN         0.050000
+16029 CARIBOU MEMORIAL HOSPITAL AND LIVING CENTER GENERAL ACUTE CARE SODA SPRINGS         25.0        NaN         0.120000
+16035      CLEARWATER VALLEY HOSPITAL AND CLINICS GENERAL ACUTE CARE      OROFINO         23.0        NaN         0.260000
+16035                  IDAHO STATE HOSPITAL NORTH        PSYCHIATRIC      OROFINO         55.0        NaN              NaN
+- 1.2c camas por hospital: media=67.44, mediana=25.00, asimetría=3.03, atípicos (> 144.4): 6, ceros: 0
+- 1.2c camas/10k por condado: media=15.44, mediana=12.96, asimetría=2.31, atípicos (> 49.9): 2, ceros: 11
+- 1.2c Participación de los 5 hospitales más grandes en las camas del estado: 49.5 %

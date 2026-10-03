@@ -1,4 +1,4 @@
-radio_km,poblacion_cubierta,poblacion_total,porcentaje_cobertura,chequeo_por_distancia,area_cobertura_km2
-5,9647909,18547526,52.02,9648204,15513
-10,13379407,18547526,72.14,13379983,39658
-20,17141588,18547526,92.42,17141948,78973
+radio_km,poblacion_cubierta,poblacion_total,porcentaje_cobertura,condados_completos,condados_sin_cobertura
+10,293704,1787065,16.43,0,8
+25,1007714,1787065,56.39,0,1
+50,1646614,1787065,92.14,16,0

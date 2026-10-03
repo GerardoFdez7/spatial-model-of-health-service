@@ -1,0 +1,5 @@
+archivo,registros,crs,columnas
+hospitales_eeuu.geojson,7154,EPSG:4326,"nombre, tipo, ciudad, estado, condado, fips_condado, camas_total, camas_icu, camas_licenciadas, ocupacion_total, ocupacion_icu, geometry"
+condados_eeuu.geojson,3221,EPSG:4326,"fips, nombre, cod_estado, geometry"
+estados_eeuu.geojson,51,EPSG:4326,"nombre, codigo, pais, geometry"
+poblacion_condados.csv,3246,no aplica (tabla sin geometría),"fips, condado, estado, lat, lon, poblacion"
